@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign author = site.authors[page.author] %}
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date"><a href="https://twitter.com/{{ author.twitter }}" title="{{ author.display_name }}"><img src="http://www.gravatar.com/avatar/{{author.gravatar}}.png" alt="par {{ author.display_name }}" /></a> {{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
+
+{% if site.related_posts > 0 %}
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<div class="footer">
+  <p>
+    <small><em>
+    Si vous trouvez une typo, n'hésitez pas à <a href="{{ site.github.repo }}/edit/master/{{ page.path }}">forker et éditer cet article</a>. Merci beaucoup !
+    </em></small>
+  </p>
+</div>

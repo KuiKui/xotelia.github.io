@@ -1,0 +1,37 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      true
+
+# Permalinks
+permalink:        :title
+
+# Setup
+title:            Teckos
+tagline:          Blog de l'équipe technique de Xotelia
+url:              http://xotelia.github.io
+paginate:         1
+baseurl:          /
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/xotelia/xotelia.github.io
+
+# Users
+authors:
+  denis:
+    name: Denis Roussel
+    display_name: Denis
+    gravatar: cd5689267706d38bd415011b41490ca1
+    email: denis.roussel@gmail.com
+    web: http://denisroussel.fr
+    twitter: dondouny
+    github: kuikui
+  florent:
+    name: Florent Viel
+    display_name: Florent
+    gravatar: 7f67a868fada94118e32881c2854a74c
+    email: florent.viel69@gmail.com
+    web: http://florentviel.com
+    twitter: florent_viel
+    github: luxifer
