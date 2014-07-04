@@ -1,3 +1,19 @@
-Blog de l'équipe technique de Xotelia.
+Blog de l'équipe technique de [Xotelia](http://www.xotelia.com), fait en [Jekyll](http://jekyllrb.com/) et hébergé à l'aide des [GitHub Page](https://pages.github.com/).
 
-Fait en [Jekyll](http://jekyllrb.com/) et hébergé sur [GitHub Page](https://pages.github.com/).
+## Dev
+
+Installation de Jekyll :
+```
+$
+```
+
+Clone du projet :
+```
+$ git clone https://github.com/Xotelia/xotelia.github.io.git
+$ cd xotelia.github.io.git
+```
+
+Lancement du serveur de dev sur `http://0.0.0.0:4000` :
+```
+$ jekyll serve -w
+```
