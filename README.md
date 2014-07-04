@@ -10,7 +10,7 @@ $ gem install jekyll
 Clone du projet :
 ```
 $ git clone https://github.com/Xotelia/xotelia.github.io.git
-$ cd xotelia.github.io.git
+$ cd xotelia.github.io
 ```
 
 Lancement du serveur de dev sur `http://0.0.0.0:4000` :
