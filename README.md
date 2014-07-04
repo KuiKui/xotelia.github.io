@@ -4,7 +4,7 @@ Blog de l'équipe technique de [Xotelia](http://www.xotelia.com), fait en [Jekyl
 
 Installation de Jekyll :
 ```
-$
+$ gem install jekyll
 ```
 
 Clone du projet :
