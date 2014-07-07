@@ -12,7 +12,7 @@ layout: nil
  <id>{{ site.url }}</id>
 
  {% for post in site.posts %}
- {% assign author = site.authors[post.author] %}
+ {% assign author = site.data.authors[post.author] %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
