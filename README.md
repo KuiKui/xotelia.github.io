@@ -4,7 +4,7 @@ Blog de l'équipe technique de [Xotelia](http://www.xotelia.com), fait en [Jekyl
 
 Installation de Jekyll :
 ```
-$ gem install jekyll
+$ bundle install
 ```
 
 Clone du projet :
@@ -15,5 +15,5 @@ $ cd xotelia.github.io
 
 Lancement du serveur de dev sur `http://0.0.0.0:4000` :
 ```
-$ jekyll serve -w
+$ bundle exec jekyll serve -w
 ```

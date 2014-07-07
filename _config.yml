@@ -9,7 +9,7 @@ permalink:        :title
 title:            Teckos
 tagline:          Blog de l'équipe technique de Xotelia
 url:              http://xotelia.github.io
-paginate:         1
+paginate:         5
 baseurl:          /
 
 # Custom vars
