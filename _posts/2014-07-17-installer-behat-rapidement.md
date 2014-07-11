@@ -13,7 +13,7 @@ Effectivement, nous commençons à configurer les modes d'expédition et ce qui 
 
 Même si nous avons préféré utiliser un [module](http://www.owebia.com/os2/fr/) permettant d'écrire des règles au format JSON que de modifier directement le code au sein de Magento, nous serions plus sereins si les innombrables tests que nous réalisons manuellement pour valider chaque cas étaient automatisés.
 
-Cela peut paraitre évident.
+Nous avons alors décidé d'utiliser [Behat](http://behat.org/) pour écrire ces tests.
 
 ## Initialisation de Behat 2.5
 
@@ -127,7 +127,7 @@ $ vendor/bin/behat
 
 Cette installation rapide est surtout destinée à pouvoir écrire rapidement des tests fonctionnels (ex: accompagner ou même précéder la phase de développement par l'écriture des tests correspondants ou simplement présenter le principe à son boss).
 
-Par la suite, lors de l'augmentation du nombre de tests ou de développeurs dans l'équipe, il faudra certainement :
+Par la suite, lors de l'augmentation du nombre de tests ou de développeurs au sein de l'équipe, il faudra certainement :
 * passer par un fichier `behat.yml.dist` (pour faciliter le multi-environnement : dev, CI, etc),
 * générer aléatoirement un port pour l'utilisation de PhantomJS (afin d'éviter que plusieurs builds n'utilisent le même navigateur),
 * *killer* chaque instance de PhantomJS quelques soit le résultat du build pour des raisons de performances.
