@@ -64,7 +64,7 @@ $ vendor/bin/behat --init
 
 Créer un contexte Mink dans le contexte par défaut, en modifiant le fichier `features/booststrap/FeatureContexte.php` :
 
-```
+```php
 <?php
 
 use Behat\MinkExtension\Context\MinkContext;
