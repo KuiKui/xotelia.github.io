@@ -128,6 +128,7 @@ $ vendor/bin/behat
 Cette installation rapide est surtout destinée à pouvoir écrire rapidement des tests fonctionnels (ex: accompagner ou même précéder la phase de développement par l'écriture des tests correspondants ou simplement présenter le principe à son boss).
 
 Par la suite, lors de l'augmentation du nombre de tests ou de développeurs au sein de l'équipe, il faudra certainement :
+
 * passer par un fichier `behat.yml.dist` (pour faciliter le multi-environnement : dev, CI, etc),
 * générer aléatoirement un port pour l'utilisation de PhantomJS (afin d'éviter que plusieurs builds n'utilisent le même navigateur),
 * *killer* chaque instance de PhantomJS quelques soit le résultat du build pour des raisons de performances.
