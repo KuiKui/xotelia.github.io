@@ -9,7 +9,7 @@ author: denis
 Nous souhaitons rapidement mettre en oeuvre des tests fonctionnels sur l'un de nos projets Magento.
 Effectivement, nous commençons à configurer les modes d'expédition et ce qui peut paraitre simple ne l'est pas forcément : nous allons gérer 5 modes d'expéditions totalisant plusieurs dizaines de règles de sélection utilisant autant le poids, que la destination en passant par plusieurs attributs personnalisés des produits.
 
-![Dashboard New Relic](/public/images/modes-livraison.jpg)
+![Modes de livraison](/public/images/modes-livraison.jpg)
 
 Même si nous avons préféré utiliser un [module](http://www.owebia.com/os2/fr/) permettant d'écrire des règles au format JSON que de modifier directement le code au sein de Magento, nous serions plus sereins si les innombrables tests que nous réalisons manuellement pour valider chaque cas étaient automatisés.
 
