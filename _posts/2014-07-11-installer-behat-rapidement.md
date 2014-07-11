@@ -133,4 +133,4 @@ Par la suite, lors de l'augmentation du nombre de tests ou de développeurs au s
 * générer aléatoirement un port pour l'utilisation de PhantomJS (afin d'éviter que plusieurs builds n'utilisent le même navigateur),
 * *killer* chaque instance de PhantomJS quelques soit le résultat du build pour des raisons de performances.
 
-Mes anciens collègues de [M6Web](tech.m6web.fr) devraient pouvoir détailler tous les pièges à éviter lors de l'utilisation de Behat à grande échelle ;-)
+Mes anciens collègues de [M6Web](http://tech.m6web.fr) devraient pouvoir détailler tous les pièges à éviter lors de l'utilisation de Behat à grande échelle ;-)
