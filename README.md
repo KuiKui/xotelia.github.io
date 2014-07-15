@@ -5,7 +5,7 @@ Blog de l'équipe technique de [Xotelia](http://www.xotelia.com), fait en [Jekyl
 Installation de Bundler :
 ```
 $ sudo gem install bundler
-``
+```
 
 Installation de Jekyll :
 ```
