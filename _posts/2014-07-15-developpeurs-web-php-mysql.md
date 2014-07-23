@@ -47,9 +47,9 @@ Si tu as déjà assisté à une présentation de [Baptiste Dupain](https://twitt
 ## Contrat
 
 * CDI 35h/semaine (8h - 16h30 tous les jours) sans RTT,
-* salaire avoisinant les 38k€,
+* salaire annuel brut 35k€ - 38k€,
 * TR à 8,50€,
 * mutuelle,
 * intéressement au résultat.
 
-Poste à pourvoir à proximité de Grenoble, télétravail partiel envisageable.
+Poste à pourvoir à proximité de Grenoble.
