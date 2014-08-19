@@ -6,9 +6,9 @@ highlighter:      true
 permalink:        :title
 
 # Setup
-title:            Teckos
-tagline:          Blog de l'équipe technique de Xotelia
-url:              http://xotelia.github.io
+title:            Techos
+tagline:          Blog technique de Xotelia
+url:              http://techos.xotelia.com
 paginate:         5
 baseurl:          /
 
