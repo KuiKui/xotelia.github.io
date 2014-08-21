@@ -6,7 +6,7 @@ author: denis
 
 Même s'il est maintenant possible d'[analyser correctement](/gerer-le-routing-dans-newrelic) le fonctionnement de notre application monolythique ([sic](http://media.giphy.com/media/Tggma69l9JOik/giphy.gif)), nous essayons tout de même de développer les nouvelles fonctionnalités au sein de [microservices](http://martinfowler.com/articles/microservices.html). Cela permet de minimiser l'interaction avec le code historique et ainsi de claquemurer la dette technique.
 
-Une des problématiques récurrentes lors de la mise en place d'une architecture qui tend à être [distribuée](http://fr.wikipedia.org/wiki/Architecture_distribu%C3%A9e), est la re-centralisation des informations nécessitant une analyse régulière tel que l'[ensemble des logs](https://twitter.com/bdu_p/status/501622688813973504).
+Une des problématiques récurrentes lors de la mise en place d'une architecture qui tend à être [distribuée](http://fr.wikipedia.org/wiki/Architecture_distribu%C3%A9e) est la re-centralisation des informations nécessitant une analyse régulière tel que l'[ensemble des logs](https://twitter.com/bdu_p/status/501622688813973504).
 
 C'est pourquoi, dans la série des _"installations rapides pour tester le principe et convaincre son boss"_, après avoir vu [Behat](/installer-behat-rapidement) qui devrait permettre d'être un peu plus serein lors des nombreuses mises en prod, découvrons la stack ELK ([Elasticsearch](http://www.elasticsearch.org/) + [logstash](http://logstash.net/) + [Kibana](http://www.elasticsearch.org/overview/kibana/)) qui permet de centraliser, structurer et requêter un grand nombre de données issues des fichiers de logs.
 
