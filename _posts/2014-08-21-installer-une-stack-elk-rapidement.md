@@ -8,7 +8,7 @@ Même s'il est maintenant possible d'[analyser correctement](/gerer-le-routing-d
 
 Une des problématiques récurrentes lors de la mise en place d'une architecture qui tend à être [distribuée](http://fr.wikipedia.org/wiki/Architecture_distribu%C3%A9e), est la re-centralisation des informations nécessitant une analyse régulière tel que l'[ensemble des logs](https://twitter.com/bdu_p/status/501622688813973504).
 
-C'est pourquoi, dans la série des _"installations rapides pour tester le principe et convaincre son boss"_, après avoir vu [Behat](/installer-behat-rapidement) qui devrait permettre d'être un peu plus serein lors des nombreuses mises en prod, découvrons la stack ELK : [Elasticsearch](http://www.elasticsearch.org/) + [logstash](http://logstash.net/) + [Kibana](http://www.elasticsearch.org/overview/kibana/).
+C'est pourquoi, dans la série des _"installations rapides pour tester le principe et convaincre son boss"_, après avoir vu [Behat](/installer-behat-rapidement) qui devrait permettre d'être un peu plus serein lors des nombreuses mises en prod, découvrons la stack ELK ([Elasticsearch](http://www.elasticsearch.org/) + [logstash](http://logstash.net/) + [Kibana](http://www.elasticsearch.org/overview/kibana/)) qui permet de centraliser, structurer et requêter un grand nombre de données issues des fichiers de logs.
 
 ## Mise en place
 
@@ -33,7 +33,7 @@ Chaque filtre contient donc :
 * soit un pattern réutilisable se trouvant dans `/opt/logstash/patterns`,
 * soit un pattern parmi ceux [fournis nativement](https://github.com/elasticsearch/logstash/tree/v1.4.2/patterns) par logstash.
 
-Les patterns peuvent s'imbriquer les uns dans les autres pour élaborer des mappings de plus en plus complexes. logstash fournis [un ensemble de patterns atomiques](https://github.com/elasticsearch/logstash/blob/v1.4.2/patterns/grok-patterns) permettant de faciliter la création d'autres patterns plus évolués.
+Les patterns peuvent s'imbriquer les uns dans les autres pour élaborer des mappings de plus en plus complexes. Logstash fournit [un ensemble de patterns atomiques](https://github.com/elasticsearch/logstash/blob/v1.4.2/patterns/grok-patterns) permettant de faciliter la création d'autres patterns plus évolués.
 
 ### Création d'un filtre avec un pattern existant
 
@@ -51,7 +51,7 @@ filter {
 }
 ```
 
-### Création d'un filter avec un patter personnalisé
+### Création d'un filtre avec un patter personnalisé
 
 Alors que pour créer un filtre structurant les données provenant des fichiers de logs d'erreurs d'Apache, il faut créer un tout nouveau pattern :
 
