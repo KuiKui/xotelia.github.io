@@ -8,7 +8,7 @@ Chez [Xotelia](http://www.xotelia.com/) nous avons mis en place un système qui 
 
 Afin de garder une boîte email propre et ainsi pouvoir suivre en temps réel l'évolution du système et comprendre rapidement les dysfonctionnements, nous avons décidé de trier les emails à l'aide des labels Gmail en fonction des étapes de traitement.
 
-Après plusieurs essais infructeux, attribuant des labels de manière plus ou moins aléatoire, j'ai enfin trouvé le moyen d'assigner facilement des labels aux emails au travers d'une connxion IMAP.
+Après plusieurs essais infructeux, attribuant des labels de manière plus ou moins aléatoire, j'ai enfin trouvé le moyen d'assigner facilement des labels aux emails au travers d'une connexion [IMAP](http://fr.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
 ## Manipulation standard des emails avec IMAP
 
@@ -28,15 +28,15 @@ Mais l'`UID` ne reste unique qu'au sein d'une même boite email. Ainsi, si l'on 
 Suivant les implémentations du serveur IMAP, les dossiers peuvent être :
 
 * soit physiques : si on se connecte à un compte UNIX, on peut se rendre physiquement dans le dossier à l'aide de la commande `cd` et lister simplement les messages via la commande `ls`.
-* soit virtuels : ils sont gérés uniquement par le serveur IMAP. C'est par exemple le cas du dossier `Sent Mails`, ou sur Gmail, du dossier `All Mail`, qui en IMAP s'appelle `[Gmail]/All Mail`. Suivant la configuration du serveur ces dossiers peuvent contenir tout ou partie des mails présents.
+* soit virtuels : ils sont gérés uniquement par le serveur IMAP. C'est par exemple le cas du dossier `Sent Mails`, ou sur Gmail, du dossier `All Mail`, qui en IMAP s'appelle `[Gmail]/All Mail`. Ces dossiers virtuels peuvent contenir tout ou partie des emails présents.
 
 ## Notre première erreur
 
 Lors de la première implémentation, une fois l'email récupéré depuis la boîte de réception, nous l'archivions tout de suite. C'est à dire en language IMAP, que nous le déplaçions du dossier `INBOX` vers le dossier `[Gmail]/All Mail` : son `UID` était alors différent dans la boîte de réception et dans le dossier d'archivage.
 
-Ainsi, après plusieurs traitements asynchrones sur cet email, lorsque l'on était amené à lui ajouter un label (success, error, etc.), nous ne disposions que de son `UID` dans le dossier `INBOX` qui n'était donc plus valable puisqu'il était archivé.
+Ainsi, après plusieurs traitements asynchrones sur cet email, lorsque l'on était amené à lui ajouter un label (success, error, etc.), nous ne disposions que de son `UID` dans le dossier `INBOX` qui n'était donc plus valable puisqu'il avait été archivé.
 
-Nous ajoutions donc un label au mauvais email...
+Nous ajoutions donc potentiellement un label au mauvais email...
 
 ## La première solution
 
@@ -76,9 +76,9 @@ $message->moveToMailBox('[Gmail]/All Mail');
 
 Notre projet est découpé en plusieurs petits processus qui font chacun une partie du traitement de manière asynchrone en communiquant via [RabbitMQ](http://www.rabbitmq.com/).
 
-Un des processus s'occupe de lire la boîte de réception, et de passer les emails aux processus suivants. L'ajout de label est effectué par d'autre processus. Or tous ces processus ont leur propre connexion IMAP, qui s'établie lors de l'initialisation du processus. Et chaque processus reste en attente d'un élément à dépiler et à traiter, mais de manière complètement asynchrone.
+Le premier processus s'occupe de lire la boîte de réception, et de passer le contenu des emails aux processus suivants qui ajoutent des labels au fur et à mesure des traitements. Or tous ces processus ont leur propre connexion IMAP, qui s'établie lors de l'initialisation du processus. Et chaque processus reste en attente d'un élément à dépiler et à traiter, mais de manière complètement asynchrone.
 
-Il se peut donc qu'un processus devant ajouter un label initialise sa connexion IMAP avant le processus qui récupére l'email en cours de traitement : lors de l'ajout du label ou de l'archivage, le message a traiter n'existe pas encore pour ce processus.
+Il se peut donc qu'un processus devant ajouter un label, initialise sa propre connexion IMAP avant le processus qui récupère l'email à traiter : lors de l'ajout du label, le message a traiter n'existe donc pas encore pour le processus s'il a été réceptionné entre les deux initialisations de connexion IMAP.
 
 
 ## Notre deuxième solution
@@ -99,8 +99,10 @@ Ainsi, lors de l'ajout d'un label ou de l'archivage d'un email, le processus à 
 imap_mail_copy($stream, $message->getUid(), $label, CP_UID);
 ```
 
+Si le processus n'a toujours pas connaissance de l'email à traiter même après une réouverture de la connexion IMAP, nous générons une erreur.
+
 ## Traçabilité
 
-Lorsque l'on travaille en asynchrone il est primordial de pouvoir suivre les différentes étapes de traitement. Les problèmes que nous avons rencontré avec la gestion des labels dans Gmail nous l'ont encore prouvé.
+Lorsque l'on travaille en asynchrone il est primordial de pouvoir suivre les différentes étapes de traitement. Les problèmes que nous avons rencontrés avec la gestion des labels dans Gmail nous l'ont encore prouvé.
 
-Nous vous détaillerons donc bientôt comment nous avons utilisé notre [stack ELK](/installer-une-stack-elk-rapidement/) pour tracer tous les traitements de nos différents workers développés en PHP à l'aide de [Symfony](http://symfony.com/).
+Nous vous détaillerons donc bientôt la manière dont nous avons utilisé notre [stack ELK](/installer-une-stack-elk-rapidement/) pour tracer tous les traitements de nos différents workers développés en PHP à l'aide de [Symfony](http://symfony.com/).
