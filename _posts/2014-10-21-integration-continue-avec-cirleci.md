@@ -66,7 +66,7 @@ $ docker run --link rabbitmq:rabbitmq --link mail:mail xotelia/php bin/behat
 
 ## Configuration Symfony
 
-Cependant, les paramètres de configuration de Symfony présents dans le fichier `parameters.yml` doivent être définis au lancement de l'application à partir des variables d'environnement fournies par Docker. En fouillant la documentation de Symfony, je suis tombé sur [cette page](http://symfony.com/fr/doc/current/cookbook/configuration/external_parameters.html) qui décrit comment charger des configurations externes via le fichier `config.yml`.
+Cependant, les paramètres de configuration de [Symfony](http://symfony.com/) présents dans le fichier `parameters.yml` doivent être définis au lancement de l'application à partir des variables d'environnement fournies par Docker. En fouillant la documentation de Symfony, je suis tombé sur [cette page](http://symfony.com/fr/doc/current/cookbook/configuration/external_parameters.html) qui décrit comment charger des configurations externes via le fichier `config.yml`.
 
 J'ai commencé par regarder comment me servir des variables d'environnement `SYMFONY__<param name>`, mais cela impliquait de renommer mes containers `symfony__rabbitmq_`, etc. Il aurait aussi fallu que je change le nom de mes paramètres et cela représentait trop de travail pour la valeur ajoutée.
 
