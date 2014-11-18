@@ -12,7 +12,7 @@ A chaque changement d’entreprise, la première semaine reste identique : déco
 
 Mais quoi de plus normal ? Après tout, on n’a jamais vu un padawan maitriser la force en un jour. Ce n’est jamais évident de se mettre dans la tête de quelqu’un d’autre et de comprendre sa logique. Mais le sentiment de satisfaction, le jour où enfin tout s’éclaire, est tellement agréable !
 
-## Les “petit” plus
+## Les “petits” plus
 
 Pour un développeur, l’environnement technique est finalement un point critique qui est malheureusement bien souvent négligé par les entreprises, mais pas ici :
 
