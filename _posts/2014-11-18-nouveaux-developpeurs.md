@@ -14,7 +14,7 @@ Mais quoi de plus normal ? Après tout, on n’a jamais vu un padawan maitriser 
 
 ## Les “petit” plus
 
-Pour un developpeur, l’environnement technique est finalement un point critique pour bien faire son travail. Or c’est bien souvent un critère négligé par les entreprises, mais pas ici :
+Pour un développeur, l’environnement technique est finalement un point critique qui est malheureusement bien souvent négligé par les entreprises, mais pas ici :
 
 * des [Macbook Pro Retina](https://twitter.com/dondouny/status/529562801082466304) flambant neufs,
 * git everywhere (\o/),
@@ -27,7 +27,7 @@ Il est plus simple de défendre la galaxie avec un sabre laser qu’avec un bât
 
 L’[offre d’emploi](/developpeurs-web-php-mysql) ne mentait donc pas :)
 
-Du coup, après une première journée tranquille, passée à configurer les machines et à prendre en main l’environnement en corrigeant de petites erreurs, c’est le saut dans le grand bain : on attaque l’écriture de documents d’architecture pour le prochain microservice et on réalise des corrections plus importantes bien aidés par la patience des maîtres jedi.
+Du coup, après une première journée tranquille, passée à configurer les machines et à prendre en main l’environnement en corrigeant de petites erreurs, c’est le saut dans le grand bain : on attaque l’écriture de documents d’architecture pour le prochain microservice et on réalise des corrections plus importantes, bien aidés par la patience des maîtres jedi.
 
 Les mises en prod se succèdent, sans souci majeur (ouf).
 
