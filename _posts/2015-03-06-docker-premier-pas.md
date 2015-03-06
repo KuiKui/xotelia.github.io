@@ -75,7 +75,8 @@ Une autre possibilité est de lancer le build avec l'option `--no-cache` à chaq
 Sur papier (car pas encore testé), la solution ultime reste par la création de tag sur votre image. A chaque fois que vous modifiez des dépendances dans le `Dockerfile`, on build, on teste que tout tourne correctement et on tag. Au final c'est le même principe que son code qu'on tag dans git.
 
 Dernier point unqiement lié à ceux qui ne sont pas sur linux et par conséquent vont devoir utiliser `boot2docker`. Si vous voulez utiliser Docker pour votre environnement de dev et donc accéder à votre application via un navigateur, vous allez remarquer que *out-of-the-box* l'exposition de port ne marche pas. Avec un `docker run -p 8080:80 app` on s'attendrait à pouvoir accéder à notre app via `localhost:8080`, mais en fait il manque une étape. Il faut aller dans VirtualBox et modifier les paramètres de la VM `boot2docker-vm`, dans `Network > Adapter 1 > Port forwarding` il faut rajouter une ligne qui redirige les connections sur le port `8080` de votre machine sur celui de la VM, qui a son tour sera redirigé sur le `80` de votre container.
-A noter qu'il ne faut pas utiliser l'option `-P` avec `run` sinon docker va attribuer un port aléatoire et il vous faudra modifier les paramètres de la VM à chaque fois que vous relancez le container de votre app, ce qui est juste ingérable.
+Une alternative serait de modifier le fichier `/etc/hosts` de votre machine en rajoutant une ligne du type `<ip boot2docker> docker`, vous pouvez simplement accéder à votre app dans le navigateur via `http://docker:8080`.
+A noter qu'il ne faut pas utiliser l'option `-P` avec `run` sinon docker va attribuer un port aléatoire et il vous faudra modifier les paramètres de la VM à chaque fois que vous relancez le container de votre app, ce qui est juste ingérable. Si vous utilisez la technique du fichier `hosts`, ce point est tout de suite moins génant bien entendu.
 
 ## Conclusion
 
