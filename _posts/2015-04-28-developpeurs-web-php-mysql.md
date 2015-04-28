@@ -12,7 +12,7 @@ Dans une entreprise d'une trentaine de personnes, cette personne viendra intégr
 
 ## SaaS
 
-Le site de centralisation de réservations [www.xotelia.com](http://www.xotelia.com/) dispose déjà de plusieurs centaines de clients. Ayant réussi [une levée de fond](http://frenchweb.fr/grenoble-xotelia-leve-13-million-deuros-pour-aider-les-petits-hotels-a-gerer-les-reservations-web/186520) ce début d'année, les contraintes de charges ne vont faire qu'augmenter et les défis techniques de plus en plus nombreux. Il va donc devenir nécessaire d'adapter le service pour qu'il puisse supporter cette nouvelle charge et proposer une meilleure disponibilité en passant d'un service monolytique basé sur un framework maison (*sic*) à une multitude de microservices utilisant les frameworks actuels.
+Le site de centralisation de réservations [www.xotelia.com](http://www.xotelia.com/) dispose déjà de plusieurs centaines de clients. Ayant réussi [une levée de fond](http://frenchweb.fr/grenoble-xotelia-leve-13-million-deuros-pour-aider-les-petits-hotels-a-gerer-les-reservations-web/186520) ce début d'année, les contraintes de charges ne vont faire qu'augmenter et les défis techniques seront de plus en plus nombreux. Il va donc devenir nécessaire d'adapter le service pour qu'il puisse supporter cette nouvelle charge et proposer une meilleure disponibilité en passant d'un service monolytique basé sur un framework maison (*sic*) à une multitude de microservices utilisant les frameworks actuels.
 
 ## Outils
 
