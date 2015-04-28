@@ -45,3 +45,7 @@ Si les termes `http`, `pragmatisme`, `automatisation`, `revue de code`, `pull re
 * mutuelle.
 
 Poste à pourvoir sur Lyon dans les magnifiques locaux de [Milkyway](https://goo.gl/maps/Hcyvl).
+
+## Contact
+
+Me contacter à l'adresse florent _dot_ viel _at_ xotelia _dot_ com.
