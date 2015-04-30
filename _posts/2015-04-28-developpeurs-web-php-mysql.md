@@ -48,4 +48,4 @@ Poste à pourvoir sur Lyon dans les magnifiques locaux de [Milkyway](https://goo
 
 ## Contact
 
-Me contacter à l'adresse florent _dot_ viel _at_ xotelia _dot_ com.
+Me contacter à l'adresse florent.viel+hiring@xotelia.com.
