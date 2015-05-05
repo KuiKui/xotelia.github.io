@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dev Web PHP/MySql/BG ?
+title: Dev Web Junior PHP/MySql/BG ?
 author: florent
 ---
 
@@ -34,7 +34,7 @@ Pragmatiques.
 
 ## Profil
 
-Je cherche des personnes qui aiment solutionner proprement des problèmatiques métiers complexes et qui s'investissent pour faire augmenter le CA de l'entreprise, sans honte. Mais qui aiment aussi partir à l'heure.
+Je cherche une personne qui aime solutionner proprement des problèmatiques métiers complexes et qui s'investit pour faire augmenter le CA de l'entreprise, sans honte. Et qui n'hésite pas à rester un peu plus tard le soir pour terminer une tâche en cours ou résoudre un bug.
 
 Si les termes `http`, `pragmatisme`, `automatisation`, `revue de code`, `pull request`, `test fonctionnel`, `déploiement continu`, `microservice`, `veille techno`, `open source` mais aussi `résorption de la dette technique` ont une résonance particulière pour toi, alors fais-moi signe. Je ne promets pas que tout cela soit déjà en place, mais je peux assurer que c'est la direction dans laquelle nous allons avancer.
 
