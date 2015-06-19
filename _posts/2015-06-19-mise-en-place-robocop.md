@@ -18,7 +18,7 @@ Cette décision fait suite à notre volonté d'orienter Xotelia vers une archite
 
 Nous sommes tout de suite parti sur une architecture complèmetent asynchrone, en essayant de découper au maximum les process. Désormais, quand une demande de synchronisation apparait, au lieu qu'elle soit stockée dans la _queue_ MySQL, elle est envoyée à Robocop via une API REST.
 
-![process](https://docs.google.com/a/xotelia.com/drawings/d/1eUCHa0F2X_7b9ggBcTYLD2uSvTs_hESVKQ8pMLsnyt8/pub?w=960&h=720)
+![process](/public/images/robocop.png)
 
 Comme vous pouvez le voir ce n'est pas les données à synchroniser qui sont envoyées à Robocop, mais seulement un _masque_ de synchronisation qui indique ce qui doit être synchronisé. Nous avons fais ce choix d'une part pour des raisons de performamce, mais surtout parce que entre le moment où la demande est envoyée et le moment où Robocop va effectivement mettre à jour le canal de vente, il peut se passer plusieurs secondes voire minutes. Et donc la donnée peut avoir changé entre temps.
 
