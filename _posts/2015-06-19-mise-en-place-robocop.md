@@ -8,7 +8,7 @@ Celà fait maintenant quelque temps que c'est en production, mais il n'est jamai
 
 ## Contextualisation
 
-Historiquement, cette synchronisation est faite de manière asynchrone via un système d'événements et de queues. Seulement le problème c'est que la queue en question c'est MySQL et MySQL est fait pour faire plein de choses, mais surtout pas un système de queue. Pour ça il y a [RabbitMQ](https://www.rabbitmq.com/) par exemple. Non seulement MySQL n'est pas fait pour, mais plus la base client augmente, plus le nombre de synchronisation demandé augments, plus la taille de la queue augmente et donc plus les performances de MySQL se dégradent. Suite à cette constatation nous avons voulu aller plus loin en sortant le système de synchronisation du _back office_ pour 1. ne pas gêner les performances du backoffice et 2. réécrire le ` avec des technos adaptées.
+Historiquement, cette synchronisation est faite de manière asynchrone via un système d'événements et de queues. Seulement le problème c'est que la queue en question c'est MySQL et MySQL est fait pour faire plein de choses, mais surtout pas un système de queue. Pour ça il y a [RabbitMQ](https://www.rabbitmq.com/) par exemple. Non seulement MySQL n'est pas fait pour, mais plus la base client augmente, plus le nombre de synchronisation demandé augments, plus la taille de la queue augmente et donc plus les performances de MySQL se dégradent. Suite à cette constatation nous avons voulu aller plus loin en sortant le système de synchronisation du _back office_ pour 1. ne pas gêner les performances du backoffice et 2. réécrire le avec des technos adaptées.
 
 Ainsi est né Robocop.
 
